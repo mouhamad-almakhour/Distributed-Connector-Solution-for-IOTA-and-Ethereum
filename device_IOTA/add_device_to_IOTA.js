@@ -15,10 +15,13 @@ const generate = require('iota-generate-seed');
         Item(3, "device3", 44),
         Item(4, "device4", 1)
 ];
-const myObj = [{ id: 1, name: "device1", value: 10 },
-                 { id: 2, name: "device4", value: 55 },
-                 { id: 3, name: "device3", value: 4 },
-                 { id: 4, name: "device4", value: 87 }]
+const myObj = [{ id: "device1", name: "device1", value: 10 },
+                 { id: "device2", name: "device2", value: 55 },
+                 { id: "device3", name: "device3", value: 78 },
+                { id: "device4", name: "device4", value: 4 },
+                { id: "device5", name: "device4", value: 89 },
+                { id: "device3", name: "device6", value: 25},
+                 { id: "device6", name: "device7", value: 30 }]
 
 const iota = Iota.composeAPI({
     provider: 'http://192.168.0.19:14265'
@@ -32,11 +35,11 @@ setInterval(function () {
    
     const address = 'HEQLOWORLDHELLOWORLDHELLOWORLDHELLOWORLDHELLOWORLDHELLOWORLDHELLOWORLDHELLOWOR99D';
 
-    //for (var i = 0; i < myObj.length; i++) {
-    const m = JSON.stringify(myObj[1].id);
-    console.log("input data is : "+ m)
+    for (var i = 0; i < myObj.length; i++) {
+    const m = JSON.stringify(myObj[i].id);
+    console.log("the input data is : "+ m)
     const message = Converter.asciiToTrytes(m)
-    console.log("tryt is :  " + message)
+    console.log("the tryt is :  " + message)
     const transfers = [
         {
             value: 0,
@@ -54,9 +57,9 @@ setInterval(function () {
         .catch(err => {
             console.log(err)
         })
-        //}
+        }
 }
-, 20000);
+, 25000);
 
 
 
