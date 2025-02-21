@@ -52,7 +52,7 @@ To set up and run this project locally, follow these steps:
 ### Installation
 Run the connector software using Node.js:
   ```bash
-node connector.js
+node send_device_data_IOTA.js
 ```
 Make sure the IOTA and Ethereum environments are correctly set up for the connector to work effectively.
 
