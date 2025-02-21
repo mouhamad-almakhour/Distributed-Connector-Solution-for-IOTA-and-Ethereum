@@ -62,10 +62,3 @@ For inquiries, please reach out to:
 Mouhamad ALMAKHOUR 
 Hussein HELLANI
 ```
-
-
-
-
-
-
-   ```
